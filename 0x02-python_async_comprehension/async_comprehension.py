@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This module contains the async_comprehension coroutine.
+This module contains an asynchronous comprehension example.
 """
 
 import asyncio
@@ -10,7 +10,6 @@ from async_generator import async_generator
 
 async def async_comprehension() -> List[float]:
     """
-    Coroutine that collects 10 random numbers from async_generator using
-    an asynchronous comprehension and returns them.
+    Collects 10 random numbers using an async comprehending over async_generator.
     """
-    return [number async for number in async_generator()]
+    return [i async for i in async_generator()]
