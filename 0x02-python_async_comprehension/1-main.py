@@ -4,8 +4,7 @@ Main script to run the async_comprehension coroutine and print the result.
 """
 
 import asyncio
-
-async_comprehension = __import__('1-async_comprehension').async_comprehension
+from async_comprehension import async_comprehension
 
 
 async def main():
@@ -20,4 +19,3 @@ if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())
     loop.close()
-
