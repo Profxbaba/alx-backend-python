@@ -7,9 +7,9 @@ import asyncio
 from typing import List
 from async_generator import async_generator
 
+
 async def async_comprehension() -> List[float]:
     """
-    Asynchronously generates a list of 10 random numbers.
+    Collects 10 random numbers using an async comprehending over async_generator.
     """
     return [i async for i in async_generator()]
-
