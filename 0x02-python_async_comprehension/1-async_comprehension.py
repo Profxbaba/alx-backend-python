@@ -10,6 +10,6 @@ from async_generator import async_generator
 
 async def async_comprehension() -> List[float]:
     """
-    Collects 10 random numbers using an async comprehending over async_generator.
+Collects 10 random numbers using an async comprehending.
     """
     return [i async for i in async_generator()]
