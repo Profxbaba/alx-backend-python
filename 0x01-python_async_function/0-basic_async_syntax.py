@@ -5,10 +5,9 @@ This module contains the async function wait_random.
 
 import asyncio
 import random
-from typing import Union
+from typing import Any
 
-
-async def wait_random(max_delay: int = 10) -> Union[float, int]:
+async def wait_random(max_delay: int = 10) -> float:
     """
     Asynchronous coroutine that waits for a random delay between 0 & max_delay
     seconds.
@@ -19,6 +18,6 @@ async def wait_random(max_delay: int = 10) -> Union[float, int]:
     Returns:
         float: The actual delay in seconds.
     """
-    delay = random.uniform(0, max_delay)
+    delay: float = random.uniform(0, max_delay)
     await asyncio.sleep(delay)
     return delay
