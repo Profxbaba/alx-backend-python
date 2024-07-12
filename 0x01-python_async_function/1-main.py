@@ -1,16 +1,11 @@
 #!/usr/bin/env python3
-"""
+'''
 Test file for printing the correct output of the wait_n coroutine
-"""
-
+'''
 import asyncio
-from concurrent_coroutines import wait_n
 
-def main():
-    print(asyncio.get_event_loop().run_until_complete(wait_n(5, 5)))
-    print(asyncio.get_event_loop().run_until_complete(wait_n(10, 7)))
-    print(asyncio.get_event_loop().run_until_complete(wait_n(10, 0)))
+wait_n = __import__('1-concurrent_coroutines').wait_n
 
-if __name__ == "__main__":
-    main()
-
+print(asyncio.run(wait_n(5, 5)))
+print(asyncio.run(wait_n(10, 7)))
+print(asyncio.run(wait_n(10, 0)))
