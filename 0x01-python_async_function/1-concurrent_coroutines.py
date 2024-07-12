@@ -14,7 +14,9 @@ script_dir = Path(__file__).resolve().parent
 sys.path.append(str(script_dir))
 
 # Load the module dynamically
-spec = importlib.util.spec_from_file_location("0_basic_async_syntax", script_dir / "0-basic_async_syntax.py")
+spec = importlib.util.spec_from_file_location(
+    "0_basic_async_syntax", script_dir / "0-basic_async_syntax.py"
+)
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
