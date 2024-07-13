@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
+
 """
-Main file for testing measure_time function
+Test file for measuring the runtime of the wait_n coroutine.
 """
 
 measure_time = __import__('2-measure_runtime').measure_time
