@@ -8,6 +8,7 @@ from typing import List
 import importlib.util
 import sys
 from pathlib import Path
+from typing import Coroutine
 
 # Adjust the path to include the directory of the script
 script_dir = Path(__file__).resolve().parent
@@ -38,3 +39,6 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     """
     delays = await asyncio.gather(*(wait_random(max_delay) for _ in range(n)))
     return sorted(delays)
+
+if __name__ == "__main__":
+    asyncio.run(wait_n(5, 5))
